@@ -1,4 +1,1 @@
-#final-project-twitter-filter
-This line was added with eclipse via my first branch.
-hellllloooooo
-This line was added by jhon at 10:14 PM
+This repository has a my-app folder, where source code for the maven project can be found. In the directory src/main/java, you will find the main.java file where the program will run off.

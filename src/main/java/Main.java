@@ -20,7 +20,7 @@ public class Main {
     	 * Second argument is what is being placed on the page.
     	 */
         
-    	get("/", homePageHandler) ;
-    	//get("/hello", (req, res) -> "Hello World said the dog to Carla");
+    	get("/", homePageHandler);
+    	get("/hello", (req, res) -> "Hello World said the dog to Carla");
     }
 }

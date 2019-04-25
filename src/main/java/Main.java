@@ -21,11 +21,11 @@ public class Main {
     	 * Second argument is what is being placed on the page.
     	 */
         
-    	get("/", welcomePage);
-    	get("/tweetFeed", tweetFeed);
-    	get("/filteredFeed", filteredFeed);
-    	get("/hiddenTweets", hiddenTweets);
-    	get("/viewTweets", homePageHandler);
+    	get("/", welcomePage); //user interface
+    	get("/tweetFeed", tweetFeed); //unfiltered
+    	get("/filteredFeed", filteredFeed); // protected
+    	get("/hiddenTweets", hiddenTweets); //what I missed
+    	get("/viewTweets", homePageHandler); //may not need
     	
     	get("/hello", (req, res) -> "Hello World said the dog to Carla");
     }

@@ -43,6 +43,7 @@ public class TwitterExample {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
+		unfilteredStatuses = new ArrayList<Status>();
 		badStatuses = new ArrayList<Status>();
 		goodStatuses = new ArrayList<Status>();
 		

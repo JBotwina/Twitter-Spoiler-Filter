@@ -22,6 +22,9 @@ public class Main {
     	 */
         
     	get("/", welcomePage);
+    	get("/tweetFeed", tweetFeed);
+    	get("/filteredFeed", filteredFeed);
+    	get("/hiddenTweets", hiddenTweets);
     	get("/viewTweets", homePageHandler);
     	
     	get("/hello", (req, res) -> "Hello World said the dog to Carla");

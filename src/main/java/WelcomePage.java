@@ -2,6 +2,11 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 
+/**
+ * 
+ * @author mamaya
+ *	handles front end view for user.
+ */
 public class WelcomePage implements Route {
 
 	private String hello = "Welcome to the Twitter Filter. \nWhat word(s) do you want to filter out?";

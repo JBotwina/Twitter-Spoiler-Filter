@@ -14,6 +14,8 @@ public class TwitterExample {
 	// gets Twitter instance with default credentials
     private Twitter twitter;
     private User user;
+    //unfiltered statuses
+    private ArrayList<Status> unfilteredStatuses;
     // statuses we do not want to push to web app.
     private ArrayList<Status> badStatuses;
     //statuses we want to push to web app
@@ -90,7 +92,11 @@ public class TwitterExample {
             	 * Loop through each status in the homeTimeline statuses.
             	 * Check if each tweet has a keyword 
             	 */
-	            for (Status status : statuses) {  
+	            for (Status status : statuses) {
+	            	//grab the statuses before they are filtered.
+	            	if(!unfilteredStatuses.contains(status)) {
+	            		unfilteredStatuses.add(status);
+	            	}
 	            	String[] tweetedWords = status.getText().split(" ");
 	            	for(int x=0; x<tweetedWords.length; x++) {
 	            		//in practice these keywords would be inputted by the user.

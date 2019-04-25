@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
     	port(8080);
     	
+    	WelcomePage welcomePage = new WelcomePage();
     	HomePageHandler homePageHandler = new HomePageHandler();
     	/**
     	 * Input: String
@@ -20,7 +21,9 @@ public class Main {
     	 * Second argument is what is being placed on the page.
     	 */
         
-    	get("/", homePageHandler);
+    	get("/", welcomePage);
+    	get("/viewTweets", homePageHandler);
+    	
     	get("/hello", (req, res) -> "Hello World said the dog to Carla");
     }
 }

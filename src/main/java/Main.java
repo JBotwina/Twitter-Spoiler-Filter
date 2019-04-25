@@ -13,6 +13,9 @@ public class Main {
     	port(8080);
     	
     	WelcomePage welcomePage = new WelcomePage();
+    	TweetFeed tweetFeed = new TweetFeed();
+    	FilteredFeed filteredFeed = new FilteredFeed();
+    	HiddenFeed hiddenFeed = new HiddenFeed();
     	HomePageHandler homePageHandler = new HomePageHandler();
     	/**
     	 * Input: String
@@ -24,7 +27,7 @@ public class Main {
     	get("/", welcomePage); //user interface
     	get("/tweetFeed", tweetFeed); //unfiltered
     	get("/filteredFeed", filteredFeed); // protected
-    	get("/hiddenTweets", hiddenTweets); //what I missed
+    	get("/hiddenFeed", hiddenFeed); //what I missed
     	get("/viewTweets", homePageHandler); //may not need
     	
     	get("/hello", (req, res) -> "Hello World said the dog to Carla");

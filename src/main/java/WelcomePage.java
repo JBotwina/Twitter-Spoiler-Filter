@@ -4,7 +4,7 @@ import spark.Route;
 
 public class WelcomePage implements Route {
 
-	private String hello = "Welcome to the Twitter Filter. /nWhat word(s) do you want to filter out?";
+	private String hello = "Welcome to the Twitter Filter. \nWhat word(s) do you want to filter out?";
 	
 
 	//@Override  what's the deal with this??  

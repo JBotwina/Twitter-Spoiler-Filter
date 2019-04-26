@@ -1,5 +1,4 @@
-//can we change teh name of the default package to something else?
-// how did we end up with default package vs. a named package?
+package PageHandlers;
 
 
 import java.util.ArrayList;

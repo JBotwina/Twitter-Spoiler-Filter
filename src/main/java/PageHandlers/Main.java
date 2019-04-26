@@ -1,10 +1,11 @@
-
+package PageHandlers;
 import static spark.Spark.*;
 
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.HomePageHandler;
 import PageHandlers.WelcomePage;
+import backEnd.TweetFeed;
 
 
 /**

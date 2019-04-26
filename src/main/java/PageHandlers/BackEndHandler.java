@@ -2,12 +2,14 @@ package PageHandlers;
 
 import java.util.ArrayList;
 
+import backEnd.TwitterExample;
 import twitter4j.Status;
 
 public class BackEndHandler {
 
 	public void getBadStatuses() {
-		default.TwitterExample te = new TwitterExample();
+		
+		TwitterExample te = new TwitterExample();
 		ArrayList<Status> badStatuses = te.getBadStatuses();	
 	}
 }

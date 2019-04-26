@@ -10,8 +10,8 @@ import spark.Route;
  *	handles front end view for user.
  */
 public class WelcomePage implements Route {
-
-	private String hello = "Welcome to the Twitter Filter. \nWhat word(s) do you want to filter out?";
+// why is /n not working??
+	private String hello = "Welcome to the Twitter Filter. \n What word(s) do you want to filter out?";
 	
 
 	//@Override  what's the deal with this??  

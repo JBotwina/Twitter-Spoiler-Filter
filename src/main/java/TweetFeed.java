@@ -30,9 +30,10 @@ public class TweetFeed implements Route{
 	 * retrieves list of tweets from back end
 	 */
 	public void getBadStatuses() {
+		System.out.println("Hello");
 		TwitterExample te = new TwitterExample();
 		ArrayList<Status> badStatuses = te.getBadStatuses();
-		this.feed = badStatuses.get(0).getUser().toString();
+		feed = badStatuses.get(0).getUser().toString();
 		
 	}
 

@@ -2,4 +2,4 @@ Notes
 
 + Why does @override appear and why does it then need to be removed?
 tweetfeed.java
-+ 
++ should backend calls all be in 1 class, or in separate classes (for each page)?

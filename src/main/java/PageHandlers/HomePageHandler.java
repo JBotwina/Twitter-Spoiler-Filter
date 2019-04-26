@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import spark.Request;
 import spark.Response;
 import spark.Route;
-import twitter4j.Status;
-
 
 
 public class HomePageHandler implements Route {
@@ -15,13 +13,5 @@ public class HomePageHandler implements Route {
 	
 	public Object handle(Request request, Response response) throws Exception {
 		return display;
-	}
-	
-	public void getBadStatuses() {
-		TwitterExample te = new TwitterExample();
-		ArrayList<Status> badStatuses = te.getBadStatuses();
-		
-		
-	}
-	
+	}	
 }

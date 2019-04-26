@@ -28,7 +28,11 @@ public class TwitterExample {
     private LocalTime endTime;
     //the time that we need to wait to run the program
     long differenceInMili;
-	
+    
+	public ArrayList<Status> getUnfilteredStatuses() {
+		return unfilteredStatuses;
+	}
+
 	public ArrayList<Status> getBadStatuses() {
 		return badStatuses;
 	}

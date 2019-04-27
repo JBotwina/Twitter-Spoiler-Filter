@@ -11,11 +11,16 @@ import spark.Route;
  */
 public class WelcomePage implements Route {
 // why is /n not working??
-	private String hello = "Welcome to the Twitter Filter. \n What word(s) do you want to filter out?";
+//	private String hello = "Welcome to the Twitter Filter. \n What word(s) do you want to filter out?";
 	
-	String button = "<button>Show full feed</button>";
+	private final String header = "<html><head><title>Welcome to Twitter Filter</title></head>\n" + 
+			"<div text-align: center><h1>Welcome to Twitter Filter by</h1>\n" + 
+			"<h2>James Botwina, Jhon Valencia, Melissa Amaya</h2>\n" + 
+			"<p>For our MCIT 591 Final Class Project, Spring 2019</p>";
+	private String button = "<button >Show full feed</button></div></html>";
+	
 	public Object handle(Request request, Response response) throws Exception {
-		return button;
+		return header + button;
 	}
 	
 }

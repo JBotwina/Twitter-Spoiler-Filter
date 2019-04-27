@@ -17,7 +17,7 @@ public class WelcomePage implements Route {
 			"<div text-align: center><h1>Welcome to Twitter Filter by</h1>\n" + 
 			"<h2>James Botwina, Jhon Valencia, Melissa Amaya</h2>\n" + 
 			"<p>For our MCIT 591 Final Class Project, Spring 2019</p>";
-	private String keyWordForm = "<form><input type=\"text\" action=\"\" name=\"keyword\"placeholder=\"enter keyword(s) to filter\" ><input type=\"submit\" value=\"Show me my filtered feed\"></form>";
+	private String keyWordForm = "<form><input type=\"text\" action=\"\" name=\"keyword\"placeholder=\"enter keyword(s) to filter\" ><br><input type=\"submit\" value=\"Show me my filtered feed\"></form>";
 	
 	private String buttonFullFeed = "<button >Show full feed</button></div></html>";
 	

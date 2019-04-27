@@ -16,15 +16,15 @@ public class BackEndHandler {
 		this.te = new TwitterExample();
 	}
 
-	public void getBadStatuses() {
+	public static void getBadStatuses() {
 		badStatuses = te.getBadStatuses();	
 	}
 	
-	public void fullFeed() {
+	public static void fullFeed() {
 		fullFeed = te.getUnfilteredStatuses();
 	}
 	
-	public void filteredFeed() {
+	public static void filteredFeed() {
 		filteredFeed = te.getGoodStatuses();
 	}
 }

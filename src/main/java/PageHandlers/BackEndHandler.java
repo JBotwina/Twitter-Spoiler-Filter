@@ -7,9 +7,9 @@ import twitter4j.Status;
 
 public class BackEndHandler {
 	private TwitterExample te;
-	private ArrayList<Status> badStatuses;
-	private ArrayList<Status> fullFeed;
-	private ArrayList<Status> filteredFeed;
+	private static ArrayList<Status> badStatuses;
+	private static ArrayList<Status> fullFeed;
+	private static ArrayList<Status> filteredFeed;
 	
 	
 	public BackEndHandler() {

@@ -13,11 +13,9 @@ public class WelcomePage implements Route {
 // why is /n not working??
 	private String hello = "Welcome to the Twitter Filter. \n What word(s) do you want to filter out?";
 	
-
-	//@Override  what's the deal with this??  
-	
+	String button = "<button>Show full feed</button>";
 	public Object handle(Request request, Response response) throws Exception {
-		return hello;
+		return button;
 	}
 	
 }

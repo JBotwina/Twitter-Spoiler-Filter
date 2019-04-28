@@ -13,7 +13,7 @@ public class FullFeedDisplay implements Route{
 	private ArrayList<Status> tweets;
 	
 	public FullFeedDisplay() {
-//		tweets = BackEndHandler.fullFeed();
+		tweets = BackEndHandler.fullFeed();
 	}
 	
 	

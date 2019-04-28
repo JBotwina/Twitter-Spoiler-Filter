@@ -52,6 +52,7 @@ public class TwitterExample {
 		unfilteredStatuses = new ArrayList<Status>();
 		badStatuses = new ArrayList<Status>();
 		goodStatuses = new ArrayList<Status>();
+		retrieveStatuses();
 		
     }
 	public void setTimes() {
@@ -161,13 +162,13 @@ public class TwitterExample {
         System.out.println("End of good Statuses******************************");
 	}
 	
-	public static void main(String[] args) {
-		TwitterExample te = new TwitterExample();
-		te.setTimes();
-		te.retrieveStatuses();
-		te.printBadStatuses();
-		te.printGoodStatuses();
-	}
+//	public static void main(String[] args) {
+//		TwitterExample te = new TwitterExample();
+//		te.setTimes();
+//		te.retrieveStatuses();
+//		te.printBadStatuses();
+//		te.printGoodStatuses();
+//	}
 }
 	
 

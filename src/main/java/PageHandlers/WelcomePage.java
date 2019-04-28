@@ -27,12 +27,12 @@ public class WelcomePage implements Route {
 //			"id='fullFeedButton'";
 ////	
 //	
-	String buttonFullFeed = "<form action=\"fullFeed\" method=\"get\"> +"
-			+ "<button type=\"submit\" value=\"Show full feed\"> +"
-			+ "</form></div></html>";
+	String fullFeedButton = "<form action=\"fullFeed\" method=\"get\"> "+
+			"<button type=\"submit\" value=\"Show full feed\">Show Full Feed</button>" +
+			"</form></div></html>";
 	
 	public Object handle(Request request, Response response) throws Exception {
-		return header + instructions + keyWordForm + buttonFullFeed;
+		return header + instructions + keyWordForm + fullFeedButton;
 	}
 	
 }

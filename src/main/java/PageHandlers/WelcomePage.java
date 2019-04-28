@@ -20,7 +20,7 @@ public class WelcomePage implements Route {
 	private final String instructions = "<p>You can choose to view your full, unfiltered, Twitter feed, or enter keywords that you want filtered out of your feed for a period of time. </p>";
 	private String keyWordForm = "<form action=\"/filteredFeed\" method=\"post\"><input type=\"text\" name=\"keyword\"placeholder=\"enter keyword(s) to filter\" ><br><input type=\"submit\" value=\"Show me my filtered feed\"></form>";
 	
-	private String buttonFullFeed = "<button >Show full feed</button></div></html>";
+	private String buttonFullFeed = "<form action=\"/fullFeed\" method=\"get\"><input type=\"submit\" value=\"Show full feed\"></form></div></html>";
 	
 	public Object handle(Request request, Response response) throws Exception {
 		return header + instructions + keyWordForm + buttonFullFeed;

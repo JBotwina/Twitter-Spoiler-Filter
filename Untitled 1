@@ -6,3 +6,6 @@ Notes
 should methods be static? 
 which makes variables static?  or should variables be private?
 
+2. Welcome handler line 23
+why does "?" show up in url in browser?
+

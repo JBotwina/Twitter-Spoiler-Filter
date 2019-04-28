@@ -6,11 +6,11 @@ import backEnd.TwitterExample;
 import twitter4j.Status;
 
 public class BackEndHandler {
-	private TwitterExample te;
+	private static TwitterExample te;
 
 	
 	public BackEndHandler() {
-		this.te = new TwitterExample();
+		te = new TwitterExample();
 	}
 
 	public static ArrayList<Status> getBadStatuses() {
@@ -18,6 +18,8 @@ public class BackEndHandler {
 	}
 	
 	public static ArrayList<Status> fullFeed() {
+		System.out.println(te);
+		te.getUnfilteredStatuses();
 		return te.getUnfilteredStatuses();
 	}
 	

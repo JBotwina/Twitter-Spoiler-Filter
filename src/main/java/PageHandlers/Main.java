@@ -5,8 +5,6 @@ import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.HomePageHandler;
 import PageHandlers.WelcomePage;
-import backEnd.TweetFeed;
-
 
 /**
  * This is the main runner for the program. It will consolidate the back-end methods and push 
@@ -20,18 +18,19 @@ public class Main {
     	port(8080);
     	
     	BackEndHandler backEndHandler = new BackEndHandler();
+    	
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
-    	FilteredFeed filteredFeed = new FilteredFeed();
-    	HiddenFeed hiddenFeed = new HiddenFeed();
+    	FilteredFeed filteredFeed = new FilteredFeed(backEndHandler);
+    	HiddenFeed hiddenFeed = new HiddenFeed(backEndHandler);
     	HomePageHandler homePageHandler = new HomePageHandler();
-    	
+      	
     	/**
     	 * Input: String
     	 * Output: string
     	 * Practice get request to the local page, first argument is the page to make the request to
     	 * Second argument is what is being placed on the page.
-    	 */
+    	 */ 
         
     	get("/", welcomePage); //user interface
     	get("/fullFeed", fullFeed); //unfiltered
@@ -39,6 +38,6 @@ public class Main {
     	get("/hiddenFeed", hiddenFeed); //what I missed
     	get("/viewTweets", homePageHandler); //may not need
     	
-    	get("/hello", (req, res) -> "Hello World said the dog to Carla");
+    	get("/hello", (req, res) -> "Hello said the dog to Carla");
     }
 }

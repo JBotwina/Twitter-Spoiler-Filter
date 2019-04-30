@@ -19,11 +19,13 @@ public class Main {
     public static void main(String[] args) {
     	port(8080);
     	
+    	BackEndHandler backEndHandler = new BackEndHandler();
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
     	FilteredFeed filteredFeed = new FilteredFeed();
     	HiddenFeed hiddenFeed = new HiddenFeed();
     	HomePageHandler homePageHandler = new HomePageHandler();
+    	
     	/**
     	 * Input: String
     	 * Output: string

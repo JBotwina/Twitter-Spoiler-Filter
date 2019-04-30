@@ -80,17 +80,17 @@ public class TwitterExample {
             /*
              * Pause the thread until a sufficient time has passed.
              */
-            try {
-				Thread.sleep(differenceInMili);
-			} catch (InterruptedException e1) {
+            //try {
+			//	Thread.sleep(differenceInMili);
+			//} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			//	e1.printStackTrace();
+			//}
             /*Searching Twitter:
              * Using the dateTime .isBefore() method we check that as long as the current time is before the endTime,
              * we continue to collect data.
              */
-            while(LocalTime.now().isBefore(endTime)) {
+           // while(LocalTime.now().isBefore(endTime)) {
             	/* Get the 20 most recent statuses from the authenticated user's timeline.
             	 * The status class save a plethora of information about the status and the poster of the status such
             	 * as: location, text, tweetID, userID, and userScreenName. 
@@ -126,16 +126,16 @@ public class TwitterExample {
 	            		}
 	            	}
 	            }
-	            try {
+	            //try {
 	            	/*We must sleep the calls to the api slightly in order to not exceed out limit of 180 calls per 15 mins.
 	            	 * This should not be a problem as the user will have plenty of tweets to read.
 	            	 */
-					Thread.sleep(30000);
-				} catch (InterruptedException e) {
+				//	Thread.sleep(30000);
+				//} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-            }
+			//		e.printStackTrace();
+			//	}
+            //}
             
         } catch (TwitterException te) {
             te.printStackTrace();
@@ -162,13 +162,13 @@ public class TwitterExample {
         System.out.println("End of good Statuses******************************");
 	}
 	
-//	public static void main(String[] args) {
-//		TwitterExample te = new TwitterExample();
+	//public static void main(String[] args) {
+	//	TwitterExample te = new TwitterExample();
 //		te.setTimes();
 //		te.retrieveStatuses();
 //		te.printBadStatuses();
-//		te.printGoodStatuses();
-//	}
+	//	te.printGoodStatuses();
+	//}
 }
 	
 

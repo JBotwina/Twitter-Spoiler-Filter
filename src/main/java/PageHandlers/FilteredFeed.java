@@ -23,8 +23,8 @@ public class FilteredFeed implements Route{
 			"<button type=\"submit\" value=\"hiddenFeed\">Spoiler Feed</button>" +
 			"</form></div></html>";
 	
-	public String getTweetInfo() {
-		BackEndHandler.tweetToString()
+	public String getTweetInfo(String keyword) {
+		BackEndHandler.tweetToString(BackEndHandler.filteredFeed(keyword));
 		return tweetInfo;
 	}
 

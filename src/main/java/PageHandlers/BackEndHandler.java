@@ -28,6 +28,7 @@ public class BackEndHandler {
 	
 	public static ArrayList<Status> filteredFeed(String keyword) {
 		te.parseTweets(keyword);
+		
 		return te.getGoodStatuses();
 	}
 	

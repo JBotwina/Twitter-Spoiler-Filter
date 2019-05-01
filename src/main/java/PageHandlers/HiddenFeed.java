@@ -7,8 +7,8 @@ import spark.Route;
 public class HiddenFeed implements Route{
 	private String tweetInfo; 
 	
-	public HiddenFeed(BackEndHandler backEndHandlerParam) {
-		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.getBadStatuses());
+	public HiddenFeed() {
+//		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.getBadStatuses());
 	}
 
 	private final String header = "<html><head><title>Spoiler Tweets</title></head>\n" + 

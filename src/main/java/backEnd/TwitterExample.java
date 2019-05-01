@@ -82,6 +82,7 @@ public class TwitterExample {
 	}
 	
 	public void parseTweets(String keyword) {
+		System.out.println(keyword);
 		for(Status status : unfilteredStatuses) {
 			String[] tweetedWords = status.getText().split(" ");
 			for(int x=0; x<tweetedWords.length; x++) {

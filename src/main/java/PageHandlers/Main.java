@@ -23,8 +23,8 @@ public class Main {
     	
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
-    	FilteredFeed filteredFeed = new FilteredFeed(backEndHandler);
-    	HiddenFeed hiddenFeed = new HiddenFeed(backEndHandler);
+    	FilteredFeed filteredFeed = new FilteredFeed();
+    	HiddenFeed hiddenFeed = new HiddenFeed();
     	HomePageHandler homePageHandler = new HomePageHandler();
       	
     	/**
@@ -40,7 +40,7 @@ public class Main {
     		
     		String keyword = req.queryParams("keyword");
     		tweetFilter(keyword);
-    		return filteredFeed.getHeader() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo();
+    		return filteredFeed.getHeader() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo(keyword);
     	});
     	
     	get("/fullFeed", fullFeed); //unfiltered

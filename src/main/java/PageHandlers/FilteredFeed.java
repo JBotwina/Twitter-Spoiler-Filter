@@ -9,8 +9,10 @@ import spark.Route;
 public class FilteredFeed implements Route{
 	
 	private String tweetInfo; 
+	String it;
 	
 	public FilteredFeed(BackEndHandler backEndHandlerParam) {
+//		String it = request.queryParams("name");
 //		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
 	}
 
@@ -24,7 +26,7 @@ public class FilteredFeed implements Route{
 			"</form></div></html>";
 	
 	public Object handle(Request request, Response response) throws Exception {
-		return header + homeButton + hiddenFeedButton + tweetInfo;
+		return header + homeButton + hiddenFeedButton + tweetInfo + it;
 	}
 	
 }

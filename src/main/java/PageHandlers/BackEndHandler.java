@@ -24,7 +24,8 @@ public class BackEndHandler {
 		return fullStatuses;
 	}
 	
-	public static String filteredFeed() {
+	public static String filteredFeed(String keyword) {
+//		String unformattedStatus = te.getGoodStatuses(keyword);
 //		String statuses = jsonparser.parseJson(te.getGoodStatuses());
 		String statuses = tweetToString(te.getGoodStatuses());
 		return statuses;

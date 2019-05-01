@@ -10,6 +10,7 @@ import twitter4j.Status;
 public class FullFeedDisplay implements Route{
 	private final String header = "<h1>Full Twitter Feed</h1>";
 	private final String homeButton = "<button type=\"button\" onclick=\"location.href='/'\">Home</button>";
+	private final String seeHiddenFeedBtn = "<button type=\"button\" onclick=\"location.href='/hiddenFeed'\">All Clear. See What I Missed</button>";
 	private String tweets;
 	
 
@@ -20,7 +21,7 @@ public class FullFeedDisplay implements Route{
 	
 	public Object handle(Request request, Response response) throws Exception {
 		
-		return header + homeButton + tweets;
+		return header + homeButton + seeHiddenFeedBtn + tweets;
 	}
 
 }

@@ -17,7 +17,7 @@ import twitter4j.Status;
 @SuppressWarnings("unused")
 public class jsonparser {
 	
-	public String parseJson(ArrayList<Status> statuses) {
+	public static String parseJson(ArrayList<Status> statuses) {
 		ArrayList<String> tweetInfoList = new ArrayList<String>();
 		ArrayList<Status> tweets = statuses;
 		

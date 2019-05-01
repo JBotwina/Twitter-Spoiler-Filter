@@ -18,17 +18,19 @@ public class BackEndHandler {
 		return te.getBadStatuses();	
 	}
 	
-	public static ArrayList<Status> fullFeed() {
-		te.getUnfilteredStatuses();
-		return te.getUnfilteredStatuses();
+	// Melissa (notation so that I don't forget which method I'm working on and don't change Jhon's code -- which I think I already did, but don't quite remember!!)
+	public static String fullFeed() {
+		String fullStatuses = tweetToString(te.getUnfilteredStatuses());
+		return fullStatuses;
 	}
 	
-	public static ArrayList<Status> filteredFeed() {
-		te.getGoodStatuses();
-		return te.getGoodStatuses();
+	public static String filteredFeed() {
+//		String statuses = jsonparser.parseJson(te.getGoodStatuses());
+		String statuses = tweetToString(te.getGoodStatuses());
+		return statuses;
 	}
 	
-	public String tweetToString(ArrayList<Status> tweets) {
+	public static String tweetToString(ArrayList<Status> tweets) {
 		StringBuilder tweetData = new StringBuilder();
 		tweetData.append("<div><ul>");
 		for (Status status : tweets) {

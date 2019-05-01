@@ -33,7 +33,12 @@ public class Main {
     	 */ 
         
     	get("/", welcomePage); //user interface
-    	get("/fullFeed", fullFeed); //unfiltered
+//    	get("/fullFeed", fullFeed); //unfiltered
+    	
+    	get("/fullFeed", (request, response) -> {
+    	    
+    		return BackEndHandler.fullFeed();
+    	});
     	get("/filteredFeed", filteredFeed); // protected
     	get("/hiddenFeed", hiddenFeed); //what I missed
     	get("/viewTweets", homePageHandler); //may not need

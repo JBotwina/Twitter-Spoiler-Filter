@@ -11,7 +11,7 @@ public class FilteredFeed implements Route{
 	private String tweetInfo; 
 	
 	public FilteredFeed(BackEndHandler backEndHandlerParam) {
-		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
+//		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
 	}
 
 	private final String header = "<html><head><title>Spoiler Free Tweets</title></head>\n" + 

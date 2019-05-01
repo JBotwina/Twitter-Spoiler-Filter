@@ -17,8 +17,7 @@ public class BackEndHandler {
 	}
 
 	public static ArrayList<Status> getBadStatuses() {
-		te.getBadStatuses();
-		return te.getBadStatuses();	
+		return te.getSpoilerTweets();	
 	}
 	
 	// Melissa (notation so that I don't forget which method I'm working on and don't change Jhon's code -- which I think I already did, but don't quite remember!!)
@@ -27,8 +26,8 @@ public class BackEndHandler {
 		return fullStatuses;
 	}
 	
-	public static ArrayList<Status> filteredFeed() {
-		te.getGoodStatuses();
+	public static ArrayList<Status> filteredFeed(String keyword) {
+		te.parseTweets(keyword);
 		return te.getGoodStatuses();
 	}
 	

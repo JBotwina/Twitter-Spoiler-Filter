@@ -9,11 +9,9 @@ import spark.Route;
 public class FilteredFeed implements Route{
 	
 	private String tweetInfo; 
-	String it;
 	
 	public FilteredFeed(BackEndHandler backEndHandlerParam) {
-//		String it = request.queryParams("name");
-//		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
+		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
 	}
 
 	private final String header = "<html><head><title>Spoiler Free Tweets</title></head>\n" + 
@@ -25,8 +23,24 @@ public class FilteredFeed implements Route{
 			"<button type=\"submit\" value=\"hiddenFeed\">Spoiler Feed</button>" +
 			"</form></div></html>";
 	
+	public String getTweetInfo() {
+		return tweetInfo;
+	}
+
+	public String getHeader() {
+		return header;
+	}
+
+	public String getHomeButton() {
+		return homeButton;
+	}
+
+	public String getHiddenFeedButton() {
+		return hiddenFeedButton;
+	}
+
 	public Object handle(Request request, Response response) throws Exception {
-		return header + homeButton + hiddenFeedButton + tweetInfo + it;
+		return header + homeButton + hiddenFeedButton + tweetInfo;
 	}
 	
 }

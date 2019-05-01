@@ -1,10 +1,12 @@
 package PageHandlers;
 import static spark.Spark.*;
 
+
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.HomePageHandler;
 import PageHandlers.WelcomePage;
+import spark.Request;
 
 /**
  * This is the main runner for the program. It will consolidate the back-end methods and push 
@@ -33,16 +35,31 @@ public class Main {
     	 */ 
         
     	get("/", welcomePage); //user interface
+    	
+    	get("/filteredFeed", (req, res) -> {
+    		
+    		String keyword = req.queryParams("keyword");
+    		tweetFilter(keyword);
+    		return filteredFeed.getHeader() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo();
+    	});
+    	
     	get("/fullFeed", fullFeed); //unfiltered
     	
 //    	get("/fullFeed", (request, response) -> {
 //    	    
 //    		return BackEndHandler.fullFeed();
 //    	});
-    	get("/filteredFeed", filteredFeed); // protected
+    	
+//    	get("/filteredFeed", filteredFeed); // protected	 
+    	
     	get("/hiddenFeed", hiddenFeed); //what I missed
     	get("/viewTweets", homePageHandler); //may not need
     	
     	get("/hello", (req, res) -> "Hello said the dog to Carla");
     }
+
+	private static void tweetFilter(String keyword) {
+		// TODO Auto-generated method stub
+		System.out.println(keyword);
+	}
 }

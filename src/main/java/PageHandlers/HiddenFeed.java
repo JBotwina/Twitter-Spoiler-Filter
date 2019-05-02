@@ -21,6 +21,11 @@ public class HiddenFeed implements Route{
 		 
 	private final String homeButton = "<button type=\"button\" onclick=\"location.href='/'\">Home</button>";
 	
+	public String getTweetInfo() {
+		tweetInfo = BackEndHandler.tweetToString(BackEndHandler.getBadStatuses());
+		return tweetInfo;
+	}
+	
 	public Object handle(Request request, Response response) throws Exception {
 		return header + homeButton + "<body>" + tweetInfo + bootstrapJS + "</body></html>";
 	}

@@ -34,6 +34,7 @@ public class TwitterExample {
 	}
 
 	public ArrayList<Status> getSpoilerTweets() {
+		System.out.println("getting the bad stuff" + spoilerTweets.toString());
 		return spoilerTweets;
 	}
 	//
@@ -43,6 +44,7 @@ public class TwitterExample {
 		 * need String keyword
 		 * from within here call retrieve statuses and pass in keyword
 		 */
+		System.out.println("getting the goods" + goodStatuses.toString());
 		return goodStatuses;
 	}
 
@@ -82,12 +84,12 @@ public class TwitterExample {
 	}
 	
 	public void parseTweets(String keyword) {
-		System.out.println(keyword);
 		for(Status status : unfilteredStatuses) {
 			String[] tweetedWords = status.getText().split(" ");
 			for(int x=0; x<tweetedWords.length; x++) {
         		//in practice these keywords would be inputted by the user.
         		//keyword param
+				
         		if(tweetedWords[x].toLowerCase().equals(keyword.toLowerCase())){
         			//we do not want to save duplicate statuses
         			if(!spoilerTweets.contains(status)) {

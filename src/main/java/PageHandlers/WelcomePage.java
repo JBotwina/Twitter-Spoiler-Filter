@@ -19,7 +19,7 @@ public class WelcomePage implements Route {
 			"<p>For our MCIT 591 Final Class Project, Spring 2019</p>";
 	private final String instructions = "<p>You can choose to view your full, unfiltered, Twitter feed, or enter keywords that you want filtered out of your feed for a period of time. </p>";
 	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
-			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" > "
+			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
 			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\"></form>";
 
 	

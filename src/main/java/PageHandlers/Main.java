@@ -15,6 +15,12 @@ import spark.Request;
  *
  */
 
+/**
+ * Launches the app.
+ * Handles all routes for app
+ * @author mamaya
+ *
+ */
 public class Main {
     public static void main(String[] args) {
     	port(8080);

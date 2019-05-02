@@ -24,7 +24,7 @@ public class FilteredFeed implements Route{
 			"</form></div></html>";
 	
 	public String getTweetInfo(String keyword) {
-		BackEndHandler.tweetToString(BackEndHandler.filteredFeed(keyword));
+		tweetInfo = BackEndHandler.tweetToString(BackEndHandler.filteredFeed(keyword));
 		return tweetInfo;
 	}
 

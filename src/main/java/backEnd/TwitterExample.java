@@ -90,7 +90,7 @@ public class TwitterExample {
         		//in practice these keywords would be inputted by the user.
         		//keyword param
 				
-				System.out.println(keyword.toLowerCase().contains(tweetedWords[x].toLowerCase()) + " " + "Tweet: " + tweetedWords[x].toLowerCase() );
+//				System.out.println(keyword.toLowerCase().contains(tweetedWords[x].toLowerCase()) + " " + "Tweet: " + tweetedWords[x].toLowerCase() );
         		if(tweetedWords[x].toLowerCase().contains(keyword.toLowerCase())){
         			//we do not want to save duplicate statuses
         			if(!spoilerTweets.contains(status)) {

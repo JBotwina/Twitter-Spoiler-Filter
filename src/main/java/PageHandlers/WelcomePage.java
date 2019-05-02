@@ -13,11 +13,16 @@ public class WelcomePage implements Route {
 // why is /n not working??
 //	private String hello = "Welcome to the Twitter Filter. \n What word(s) do you want to filter out?";
 	
+	/**
+	 * header for website
+	 */
 	private final String header = "<html><head><title>Welcome to Twitter Filter</title></head>\n" + 
 			"<div text-align: center><h1>Welcome to Twitter Filter by</h1>\n" + 
 			"<h2>James Botwina, Jhon Valencia, Melissa Amaya</h2>\n" + 
 			"<p>For our MCIT 591 Final Class Project, Spring 2019</p>";
+	
 	private final String instructions = "<p>You can choose to view your full, unfiltered, Twitter feed, or enter keywords that you want filtered out of your feed for a period of time. </p>";
+	
 	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
 			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
 			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\"></form>";

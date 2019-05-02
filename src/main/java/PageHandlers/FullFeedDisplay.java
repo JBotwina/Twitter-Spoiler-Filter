@@ -6,6 +6,11 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 
+/**
+ * Handles the display of the full, unfiltered twitter feed
+ * @author mamaya
+ *
+ */
 public class FullFeedDisplay implements Route{
 	private final String header = "<h1>Full Twitter Feed</h1>";
 	private final String homeButton = "<button type=\"button\" onclick=\"location.href='/'\">Home</button>";

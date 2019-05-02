@@ -23,11 +23,12 @@ public class HiddenFeed implements Route{
 	
 	public String getTweetInfo() {
 		tweetInfo = BackEndHandler.tweetToString(BackEndHandler.getBadStatuses());
-		return tweetInfo;
+		if (tweetInfo.isEmpty()) return "You didn't miss a thing";
+		else return tweetInfo;
 	}
 	
 	public Object handle(Request request, Response response) throws Exception {
-		return header + homeButton + "<body>" + tweetInfo + bootstrapJS + "</body></html>";
+		return header + homeButton + "<body>" + getTweetInfo() + bootstrapJS + "</body></html>";
 	}
 	
 }

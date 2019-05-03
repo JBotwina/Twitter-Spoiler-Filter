@@ -49,17 +49,7 @@ public class Main {
     	});
     	
     	get("/fullFeed", fullFeed); //unfiltered
-    	
-//    	get("/fullFeed", (request, response) -> {
-//    	    
-//    		return BackEndHandler.fullFeed();
-//    	});
-    	
-//    	get("/filteredFeed", filteredFeed); // protected	 
-    	
     	get("/hiddenFeed", hiddenFeed); //what I missed
-    	get("/viewTweets", homePageHandler); //may not need
-    	
-    	get("/hello", (req, res) -> "Hello said the dog to Carla");
+//    	get("/viewTweets", homePageHandler); //may not need
     }
 }

@@ -28,7 +28,7 @@ public class FilteredFeed implements Route {
 					+
 					"</form></div></html>";
 
-	private String keyword;
+	private static String keyword;
 
 	public String getTweetInfo(String keyword) {
 		tweetInfo = BackEndHandler
@@ -59,7 +59,7 @@ public class FilteredFeed implements Route {
 		System.out.println(getKeyword());
 		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
-	public String getKeyword() {
+	public static String getKeyword() {
 		return keyword;
 	}
 

@@ -26,7 +26,6 @@ public class Main {
     	port(8080);
     	
     	BackEndHandler backEndHandler = new BackEndHandler();
-    	
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
     	FilteredFeed filteredFeed = new FilteredFeed();

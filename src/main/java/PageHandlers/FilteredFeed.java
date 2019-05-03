@@ -29,8 +29,6 @@ public class FilteredFeed implements Route {
 					"</form></div></html>";
 
 	private String keyword;
-//	private String displayKeywords = "keyword";
-	private String displayKeywords = "<div><h3>We are filtering your feed to remove tweets with the following keyword(s):</h3></div>";
 
 	public String getTweetInfo(String keyword) {
 		tweetInfo = BackEndHandler
@@ -39,6 +37,7 @@ public class FilteredFeed implements Route {
 		return tweetInfo;
 	}
 
+	
 	public String getHeader() {
 		return header;
 	}
@@ -53,7 +52,19 @@ public class FilteredFeed implements Route {
 
 	public Object handle(Request request, Response response)
 			throws Exception {
-		return header + displayKeywords + homeButton + hiddenFeedButton + tweetInfo;
+		return header + homeButton + hiddenFeedButton + tweetInfo;
+	}
+
+	public String getKeywordDiv() {
+		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
 	}
 
 }

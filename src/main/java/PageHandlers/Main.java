@@ -45,7 +45,7 @@ public class Main {
     		
     		String keyword = req.queryParams("keyword");
     		tweetFilter(keyword);
-    		return filteredFeed.getHeader() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo(keyword);
+    		return filteredFeed.getHeader() + filteredFeed.getKeywordDiv() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo(keyword);
     	});
     	
     	get("/fullFeed", fullFeed); //unfiltered

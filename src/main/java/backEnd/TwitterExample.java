@@ -34,7 +34,7 @@ public class TwitterExample {
 	}
 
 	public ArrayList<Status> getSpoilerTweets() {
-		System.out.println("getting the bad stuff" + spoilerTweets.toString());
+//		System.out.println("getting the bad stuff" + spoilerTweets.toString());
 		return spoilerTweets;
 	}
 	//
@@ -44,7 +44,7 @@ public class TwitterExample {
 		 * need String keyword
 		 * from within here call retrieve statuses and pass in keyword
 		 */
-		System.out.println("getting the goods" + goodStatuses.toString());
+//		System.out.println("getting the goods" + goodStatuses.toString());
 		return goodStatuses;
 	}
 

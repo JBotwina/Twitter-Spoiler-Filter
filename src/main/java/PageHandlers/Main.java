@@ -44,7 +44,6 @@ public class Main {
     	get("/filteredFeed", (req, res) -> {
     		
     		String keyword = req.queryParams("keyword");
-    		tweetFilter(keyword);
     		return filteredFeed.getHeader() + filteredFeed.getKeywordDiv() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo(keyword);
     	});
     	
@@ -62,9 +61,4 @@ public class Main {
     	
     	get("/hello", (req, res) -> "Hello said the dog to Carla");
     }
-
-	private static void tweetFilter(String keyword) {
-		// TODO Auto-generated method stub
-		System.out.println(keyword);
-	}
 }

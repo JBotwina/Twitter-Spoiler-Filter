@@ -56,6 +56,7 @@ public class FilteredFeed implements Route {
 	}
 
 	public String getKeywordDiv() {
+		System.out.println(getKeyword());
 		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
 	public String getKeyword() {

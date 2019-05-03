@@ -16,6 +16,9 @@ public class FullFeedDisplay implements Route{
 	private final String homeButton = "<button type=\"button\" onclick=\"location.href='/'\">Home</button>";
 //	private final String seeHiddenFeedBtn = "<button type=\"button\" onclick=\"location.href='/hiddenFeed'\">All Clear. See What I Missed</button>";
 	private String tweets;
+	private final String refreshButton = "<form action=\"fullFeed\" method=\"get\"> "+
+			"<button type=\"submit\" value=\"feed_refresh\">Refresh my feed</button>" +
+			"</form></div></html>";
 	
 
 	public FullFeedDisplay() {
@@ -25,7 +28,7 @@ public class FullFeedDisplay implements Route{
 	
 	public Object handle(Request request, Response response) throws Exception {
 		
-		return header + homeButton +  tweets;
+		return header + homeButton + refreshButton + tweets;
 	}
 
 }

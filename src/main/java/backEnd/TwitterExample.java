@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+
 import java.util.List;
 
 import twitter4j.Status;
@@ -84,8 +85,9 @@ public class TwitterExample {
 	}
 	
 	public void parseTweets(String keyword) {
+		String delimiters = "[-\\t,;.?!:#$%@\\[\\](){}_*/]";
 		for(Status status : unfilteredStatuses) {
-			String[] tweetedWords = status.getText().split(" ");
+			String[] tweetedWords = status.getText().split(delimiters);
 			for(int x=0; x<tweetedWords.length; x++) {
         		//in practice these keywords would be inputted by the user.
         		//keyword param

@@ -44,7 +44,7 @@ public class Main {
     	get("/filteredFeed", (req, res) -> {	
     		String keyword = req.queryParams("keyword");
     		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
-    		return filteredFeed.getHeader() + keywordDisplay  + filteredFeed.getBootstrapJS() + filteredFeed.getHomeButton() + filteredFeed.getHiddenFeedButton() + filteredFeed.getTweetInfo(keyword);
+    		return filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + "<div>"+filteredFeed.getHiddenFeedButton() + filteredFeed.getBootstrapJS() + "</div>" + filteredFeed.getTweetInfo(keyword);
     	});
     	
     	get("/fullFeed", fullFeed); //unfiltered

@@ -28,14 +28,7 @@ public class WelcomePage implements Route {
 
 	private String keyWordForm = "<form class=\"form-inline\" action=\"/filteredFeed\" method=get><label class=\"sr-only\" for=\"inlineFormInputName2\">Words to Filter</label>" 
 			+ "<input type=\"text\" class=\"form-control mb-2 mr-sm-2\" name=\"keyword\" id=\"keyword\"placeholder=\"words to filter\" required> "
-			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary mb-2\"></form>";
-	
-	
-//	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
-//			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
-//			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-outline-secondary\"></form>";
-
-	
+			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary mb-2\"></form>";	
 	
 	
 	

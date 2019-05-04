@@ -14,7 +14,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    
    </properties>
 
 
@@ -58,4 +57,29 @@
 	</dependency>
 
   </dependencies>
+  
+	  <plugin>
+	 <groupId>org.apache.maven.plugins</groupId>
+	 <artifactId>maven-shade-plugin</artifactId>
+	 <version>1.4</version>
+	 <executions>
+	  <execution>
+	   <goals>
+	    <goal>shade</goal>
+	   </goals>
+	   <configuration>
+	     <filters>
+		<filter>
+	          <artifact>org.eclipse.jetty.orbit:javax.servlet</artifact>
+		    <excludes>
+		      <exclude>META-INF/ECLIPSEF.RSA</exclude>
+	              <exclude>META-INF/ECLIPSEF.SF</exclude>
+	              <exclude>META-INF/eclipse.inf</exclude>
+		    </excludes>
+	        </filter>
+	       </filters>
+	    </configuration>
+	   </execution>
+	  </executions>
+	</plugin>
 </project>

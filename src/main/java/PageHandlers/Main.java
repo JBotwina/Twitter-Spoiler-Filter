@@ -18,6 +18,7 @@ import spark.Request;
 /**
  * Launches the app.
  * Handles all routes for app
+ * sample comment
  * @author mamaya
  *
  */
@@ -42,6 +43,7 @@ public class Main {
     	get("/", welcomePage); //user interface
     	
     	get("/filteredFeed", (req, res) -> {	
+    		System.out.println("work!!");
     		String keyword = req.queryParams("keyword");
     		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
     		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + "<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + "</div>" + filteredFeed.getTweetInfo(keyword);

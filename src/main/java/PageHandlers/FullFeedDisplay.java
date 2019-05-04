@@ -10,7 +10,7 @@ import spark.Route;
  *
  */
 public class FullFeedDisplay implements Route{
-	private final String header = "<head><h1>Full Twitter Feed</h1>\"<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"></head>";
+	private final String header = "<head><h1>Full Twitter Feed</h1><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"></head>";
 	private final String homeButton = "<div><button type=\"button\" onclick=\"location.href='/'\" class=\"btn btn-primary\">Home</button></div>";
 	private String tweets;
 	private final String bootstrapJS = "<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n" + 
@@ -33,7 +33,7 @@ public class FullFeedDisplay implements Route{
 	 */
 	public Object handle(Request request, Response response) throws Exception {
 		
-		return header + homeButton + refreshButton + tweets;
+		return "<div class = \"container\">" + header + homeButton + refreshButton + "</div>" + tweets;
 	}
 
 }

@@ -28,11 +28,11 @@ public class HiddenFeed implements Route{
 	}
 	
 	public Object handle(Request request, Response response) throws Exception {
-		return header + getKeyword() + homeButton + "<body>" + getTweetInfo() + bootstrapJS + "</body></html>";
+		return "<div class = \"container\">" + header + getKeyword() + homeButton + "</div><body>" + getTweetInfo() + bootstrapJS + "</body></html>";
 	}
 
 	private String getKeyword() {
-		return "<div><h4>These are the tweets that contained your keyword(s): " + FilteredFeed.getKeyword() + "</p></div>";
+		return "<h4>These are the tweets that contained your keyword(s): " + FilteredFeed.getKeyword() + "</p>";
 	}
 	
 }

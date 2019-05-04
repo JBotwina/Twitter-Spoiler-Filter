@@ -25,10 +25,20 @@ public class WelcomePage implements Route {
 	private final String instructions = "<p>You can choose to view your full, unfiltered, Twitter feed, or enter keywords that you want filtered out of your feed for a period of time. </p>";
 	
 	// form to enter keyword
-	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
-			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
-			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-outline-secondary\"></form>";
 
+	private String keyWordForm = "<form class=\"form-inline\" action=\"/filteredFeed\" method=get><label class=\"sr-only\" for=\"inlineFormInputName2\">Words to Filter</label>" 
+			+ "<input type=\"text\" class=\"form-control mb-2 mr-sm-2\" name=\"keyword\" id=\"keyword\"placeholder=\"words to filter\" required> "
+			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary mb-2\"></form>";
+	
+	
+//	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
+//			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
+//			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-outline-secondary\"></form>";
+
+	
+	
+	
+	
 	// button to view unfiltered feed
 	private String fullFeedButton = "<form action=\"fullFeed\" method=\"get\"> "+
 			"<button type=\"submit\" value=\"Show full feed\" class=\"btn btn-outline-primary\">Show Full Feed</button>" +

@@ -25,7 +25,7 @@ public class BackEndHandler {
 		String fullStatuses = tweetToString(te.getUnfilteredStatuses());
 		return fullStatuses;
 	}
-	
+		
 	public static ArrayList<Status> filteredFeed(String keyword) {
 		te.parseTweets(keyword);
 		
@@ -78,7 +78,6 @@ public class BackEndHandler {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
 		return "";
 	}
 }

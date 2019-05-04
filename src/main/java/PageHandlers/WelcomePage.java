@@ -13,7 +13,7 @@ public class WelcomePage implements Route {
 	
 	//header for website
 	private final String header = "<html><head><title>Welcome to Twitter Filter</title></head>\n" + 
-			"<div text-align: center><h1>Welcome to Twitter Filter by</h1>\n" + 
+			"<div text-align: center class=\"container\"><h1>Welcome to Twitter Filter by</h1>\n" + 
 			"<h2>James Botwina, Jhon Valencia, Melissa Amaya</h2>\n" + 
 			"<p>For our MCIT 591 Final Class Project, Spring 2019</p>";
 	
@@ -23,7 +23,7 @@ public class WelcomePage implements Route {
 	// form to enter keyword
 	private String keyWordForm = "<form action=\"/filteredFeed\" method=get> "
 			+ "<input type=\"text\" name=\"keyword\" id=\"keyword\"placeholder=\"enter keyword(s) to filter\" required> "
-			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\"></form>";
+			+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary\"></form>";
 
 	// button to view unfiltered feed
 	private String fullFeedButton = "<form action=\"fullFeed\" method=\"get\"> "+

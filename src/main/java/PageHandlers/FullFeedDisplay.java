@@ -33,7 +33,7 @@ public class FullFeedDisplay implements Route{
 	 */
 	public Object handle(Request request, Response response) throws Exception {
 		
-		return "<div class = \"container\">" + header + homeButton + refreshButton + "</div>" + tweets;
+		return "<div class = \"container\">" + header + homeButton + "<br>" + refreshButton + "</div>" + tweets;
 	}
 
 }

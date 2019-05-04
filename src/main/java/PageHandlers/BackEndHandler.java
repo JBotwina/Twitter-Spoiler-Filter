@@ -10,7 +10,12 @@ import twitter4j.Status;
 
 public class BackEndHandler {
 	private static TwitterExample te;
+	private static String wordsToFilter;
 
+
+	public static String getWordsToFilter() {
+		return wordsToFilter;
+	}
 
 	public BackEndHandler() {
 		te = new TwitterExample();
@@ -27,6 +32,7 @@ public class BackEndHandler {
 	}
 		
 	public static ArrayList<Status> filteredFeed(String keyword) {
+		wordsToFilter = keyword;
 		te.parseTweets(keyword);
 		return te.getGoodStatuses();
 	}
@@ -34,18 +40,13 @@ public class BackEndHandler {
 	public static String tweetToString(ArrayList<Status> tweets) {
 		StringBuilder tweetData = new StringBuilder();
 		
-//		tweetData.append("<div><ul>");
 		tweetData.append("<div class=\"container\">\r\n" + 
 				"  <div class=\"page-header\">\r\n" + 
 				"    <h1 id=\"timeline\">Timeline</h1>\r\n" + 
 				"  </div>\r\n" + 
 				"  <ul class=\"timeline\">");
 		for (Status status : tweets) {
-
-//			tweetData.append("<li>User: " + status.getUser().getName() + "</li>");
-//			tweetData.append("<li>Created At: " + status.getCreatedAt() + "</li>");
-//			tweetData.append("<li>Tweet: " + status.getText() + "<br/><br/></li>");
-			
+	
 			tweetData.append("<li><div class=\"timeline-badge\"><i class=\"glyphicon glyphicon-check\"></i></div>\r\n" + 
 					"      <div class=\"timeline-panel\">\r\n" + 
 					"        <div class=\"timeline-heading\">");

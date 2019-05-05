@@ -1,1 +1,5 @@
-This repository has a my-app folder, where source code for the maven project can be found. In the directory src/main/java, you will find the main.java file where the program will run off. Also, you will find TwitterExample.java, which is our submission for the coding milestone due on April 21st, 2019.
+Twitter Filter is a collaborative project by James Botwina, Jhon Valencia and Melissa Amaya for their final project for MCIT 591 at UPenn.
+
+To run, clone the repo and run the Main.java file.
+
+Must have jdk version 11 or higher on your machine.

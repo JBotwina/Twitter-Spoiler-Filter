@@ -21,7 +21,6 @@ public class BackEndHandler {
 		return te.getSpoilerTweets();	
 	}
 	
-	// Melissa (notation so that I don't forget which method I'm working on and don't change Jhon's code -- which I think I already did, but don't quite remember!!)
 	public static String fullFeed() {
 		te = new TwitterExample();
 		String fullStatuses = tweetToString(te.getUnfilteredStatuses());

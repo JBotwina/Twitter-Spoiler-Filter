@@ -45,7 +45,6 @@ public class FullFeedDisplay implements Route{
 	 * calls a method in the BackEndHandler class that retrieves a formatted string of unfiltered tweet objects
 	 */
 	public FullFeedDisplay() {
-		System.out.println("posting");
 //		tweets = BackEndHandler.fullFeed();
 	}
 

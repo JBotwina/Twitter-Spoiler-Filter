@@ -34,9 +34,14 @@ public class FilteredFeed implements Route {
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
 	
-	private final String refreshButton = "<div><form action=\"filteredFeed\" method=\"get\"> "+
-			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
-			"</form></div></div></html>";
+//	private final String refreshButton = "<div><form action=\"filteredFeed\" method=\"get\"> "+
+//			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my filtered feed</button>" +
+//			"</form></div></div></html>";
+//
+//	public String getRefreshButton() {
+//		System.out.println("returning");
+//		return refreshButton;
+//	}
 
 	private static String keyword;
 

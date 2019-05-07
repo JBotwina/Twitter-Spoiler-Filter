@@ -18,7 +18,7 @@ public class BackEndHandler {
 	}
 
 	public BackEndHandler() {
-//		te = new TwitterExample();
+		te = new TwitterExample();
 	}
 
 	public static ArrayList<Status> getBadStatuses() {

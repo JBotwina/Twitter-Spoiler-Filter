@@ -9,8 +9,8 @@ public class FilteredFeed implements Route {
 	private String tweetInfo;
 
 	public FilteredFeed() {
-		// tweetInfo =
-		// backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
+//		 tweetInfo =
+//		 backEndHandlerParam.tweetToString(backEndHandlerParam.filteredFeed());
 	}
 
 	private final String header =
@@ -33,6 +33,10 @@ public class FilteredFeed implements Route {
 			"<form action=\"hiddenFeed\" method=\"get\">" +
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
+	
+	private final String refreshButton = "<div><form action=\"filteredFeed\" method=\"get\"> "+
+			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
+			"</form></div></div></html>";
 
 	private static String keyword;
 

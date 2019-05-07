@@ -43,7 +43,6 @@ public class FilteredFeed implements Route {
 	public String getTweetInfo(String keyword) {
 		tweetInfo = BackEndHandler
 				.tweetToString(BackEndHandler.filteredFeed(keyword));
-//		this.keyword = keyword;
 		return tweetInfo;
 	}
 
@@ -71,9 +70,4 @@ public class FilteredFeed implements Route {
 	public static String getKeyword() {
 		return keyword;
 	}
-
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-
 }

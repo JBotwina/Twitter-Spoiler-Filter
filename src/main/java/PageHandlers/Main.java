@@ -4,9 +4,7 @@ import static spark.Spark.*;
 
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
-import PageHandlers.HomePageHandler;
 import PageHandlers.WelcomePage;
-import spark.Request;
 
 /**
  * This is the main runner for the program. It will consolidate the back-end methods and push 
@@ -26,12 +24,11 @@ public class Main {
     public static void main(String[] args) {
     	port(8080);
     	
-    	BackEndHandler backEndHandler = new BackEndHandler();
+//    	BackEndHandler backEndHandler = new BackEndHandler();
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
     	FilteredFeed filteredFeed = new FilteredFeed();
     	HiddenFeed hiddenFeed = new HiddenFeed();
-    	HomePageHandler homePageHandler = new HomePageHandler();
       	
     	/**
     	 * Input: String

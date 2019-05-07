@@ -1,10 +1,6 @@
 package PageHandlers;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
-
 import backEnd.TwitterExample;
 import twitter4j.Status;
 
@@ -64,21 +60,5 @@ public class BackEndHandler {
 		tweetData.append("</ul></div>");		
 		return tweetData.toString();
 	}
-	
-	public String readHTMLCode(String filename) {
-		File myFile = new File("Timeline_Bootstrap_HTML_Code.txt");
-		try {
-			Scanner s = new Scanner(myFile);
-			s.nextLine();
-			s.nextLine();
-			StringBuilder htmlLine = new StringBuilder();
-			while(s.hasNextLine()) {
-				htmlLine.append(s.next());
-			}
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return "";
-	}
+
 }

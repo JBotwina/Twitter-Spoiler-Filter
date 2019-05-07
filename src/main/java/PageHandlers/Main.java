@@ -28,7 +28,7 @@ public class Main {
     	
     	BackEndHandler backEndHandler = new BackEndHandler();
     	WelcomePage welcomePage = new WelcomePage();
-//    	FullFeedDisplay fullFeed = new FullFeedDisplay();
+    	FullFeedDisplay fullFeed = new FullFeedDisplay();
     	FilteredFeed filteredFeed = new FilteredFeed();
     	HiddenFeed hiddenFeed = new HiddenFeed();
     	HomePageHandler homePageHandler = new HomePageHandler();
@@ -49,8 +49,9 @@ public class Main {
     	});
     	
     	get("/fullFeed", (req, res) -> {
-    		FullFeedDisplay fullFeed = new FullFeedDisplay();
-    		return "<div class = \"container\">" + fullFeed.getHeader() + fullFeed.getHomeButton() + "<div><br>"+fullFeed.getRefreshButton() + "</div>" + fullFeed.getBootstrapJS() + "</div>" + fullFeed.getTweets();
+//    		FullFeedDisplay fullFeed = new FullFeedDisplay();
+    		String tweets = fullFeed.PullTweets();
+    		return "<div class = \"container\">" + fullFeed.getHeader() + fullFeed.getHomeButton() + "<div><br>"+fullFeed.getRefreshButton() + "</div>" + fullFeed.getBootstrapJS() + "</div>" + tweets;
     	});
     	
 //    	get("/fullFeed", fullFeed); //unfiltered

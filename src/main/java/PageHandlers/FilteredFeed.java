@@ -43,7 +43,6 @@ public class FilteredFeed implements Route {
 		return tweetInfo;
 	}
 
-	
 	public String getHeader() {
 		return header;
 	}

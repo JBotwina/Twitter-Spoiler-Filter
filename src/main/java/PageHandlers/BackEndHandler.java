@@ -29,6 +29,7 @@ public class BackEndHandler {
 		
 	public static ArrayList<Status> filteredFeed(String keyword) {
 		wordsToFilter = keyword;
+		te = new TwitterExample();
 		te.parseTweets(keyword);
 		return te.getGoodStatuses();
 	}

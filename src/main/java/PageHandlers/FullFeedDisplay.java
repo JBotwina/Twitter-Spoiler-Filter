@@ -1,15 +1,11 @@
 package PageHandlers;
 
-import spark.Request;
-import spark.Response;
-import spark.Route;
-
 /**
  * Handles the display of the full, unfiltered twitter feed. Has a single backend end call and 
  * @author mamaya
  *
  */
-public class FullFeedDisplay implements Route{
+public class FullFeedDisplay {
 	private final String header = "<head><h1>Full Twitter Feed</h1><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"></head>";
 	public String getHeader() {
 		return header;
@@ -55,16 +51,6 @@ public class FullFeedDisplay implements Route{
 	
 	public String PullTweets() {
 		return BackEndHandler.fullFeed();
-	}
-
-	/**
-	 * Returns all the display objects for the browser
-	 * 
-	 * We should not need this because we are using a lambda function
-	 */
-	public Object handle(Request request, Response response) throws Exception {
-		
-//		return "<div class = \"container\">" + header + homeButton + "<br>" + refreshButton + "</div>" + tweets;
 	}
 
 }

@@ -6,7 +6,7 @@ import spark.Route;
 
 /**
  * 
- * @author mamaya
+ *  @authors Jhon Valencia, Melissa Amaya, James Botwina
  *	handles front end view for user. Provides form for user to enter keyword to filter and button to display full, unfiltered feed
  */
 public class WelcomePage implements Route {

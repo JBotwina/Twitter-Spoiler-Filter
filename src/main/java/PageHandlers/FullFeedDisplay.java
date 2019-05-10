@@ -45,19 +45,26 @@ public class FullFeedDisplay implements Route{
 	 * calls a method in the BackEndHandler class that retrieves a formatted string of unfiltered tweet objects
 	 */
 	public FullFeedDisplay() {
+		System.out.println("posting");
 //		tweets = BackEndHandler.fullFeed();
 	}
-
+	
+//	public void PullTweets() {
+//		tweets = BackEndHandler.fullFeed();
+//	}
+	
 	public String PullTweets() {
 		return BackEndHandler.fullFeed();
 	}
 
 	/**
 	 * Returns all the display objects for the browser
+	 * 
 	 * We should not need this because we are using a lambda function
 	 */
-	public Object handle(Request request, Response response) throws Exception {	
-		return "<div class = \"container\">" + header + homeButton + "<br>" + refreshButton + "</div>" + tweets;
+	public Object handle(Request request, Response response) throws Exception {
+		
+//		return "<div class = \"container\">" + header + homeButton + "<br>" + refreshButton + "</div>" + tweets;
 	}
 
 }

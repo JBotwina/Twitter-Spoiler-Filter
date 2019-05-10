@@ -1,6 +1,10 @@
 package PageHandlers;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import backEnd.TwitterExample;
 import twitter4j.Status;
 
@@ -21,6 +25,7 @@ public class BackEndHandler {
 		return te.getSpoilerTweets();	
 	}
 	
+	// Melissa (notation so that I don't forget which method I'm working on and don't change Jhon's code -- which I think I already did, but don't quite remember!!)
 	public static String fullFeed() {
 		te = new TwitterExample();
 		String fullStatuses = tweetToString(te.getUnfilteredStatuses());
@@ -29,7 +34,6 @@ public class BackEndHandler {
 		
 	public static ArrayList<Status> filteredFeed(String keyword) {
 		wordsToFilter = keyword;
-		te = new TwitterExample();
 		te.parseTweets(keyword);
 		return te.getGoodStatuses();
 	}
@@ -60,5 +64,21 @@ public class BackEndHandler {
 		tweetData.append("</ul></div>");		
 		return tweetData.toString();
 	}
-
+	
+	public String readHTMLCode(String filename) {
+		File myFile = new File("Timeline_Bootstrap_HTML_Code.txt");
+		try {
+			Scanner s = new Scanner(myFile);
+			s.nextLine();
+			s.nextLine();
+			StringBuilder htmlLine = new StringBuilder();
+			while(s.hasNextLine()) {
+				htmlLine.append(s.next());
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "";
+	}
 }

@@ -1,7 +1,6 @@
 package PageHandlers;
 import static spark.Spark.*;
 
-
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.WelcomePage;
@@ -24,12 +23,11 @@ public class Main {
     public static void main(String[] args) {
     	port(8080);
     	
-//    	BackEndHandler backEndHandler = new BackEndHandler();
     	WelcomePage welcomePage = new WelcomePage();
     	FullFeedDisplay fullFeed = new FullFeedDisplay();
     	FilteredFeed filteredFeed = new FilteredFeed();
     	HiddenFeed hiddenFeed = new HiddenFeed();
-      	
+    	
     	/**
     	 * Input: String
     	 * Output: string
@@ -41,17 +39,21 @@ public class Main {
     	
     	get("/filteredFeed", (req, res) -> {	
     		String keyword = req.queryParams("keyword");
+    		filteredFeed.setKeyword(req.queryParams("keyword"));
     		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
-    		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + "<div><br>" + filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + "</div>" + filteredFeed.getTweetInfo(keyword);
+    		String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
+    				"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
+    				"</form></div></div></html>";
+    		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + 
+    				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + refreshButton +
+    				"</div>" + filteredFeed.getTweetInfo(filteredFeed.getKeyword());
     	});
     	
     	get("/fullFeed", (req, res) -> {
-//    		FullFeedDisplay fullFeed = new FullFeedDisplay();
     		String tweets = fullFeed.PullTweets();
     		return "<div class = \"container\">" + fullFeed.getHeader() + fullFeed.getHomeButton() + "<div><br>"+fullFeed.getRefreshButton() + "</div>" + fullFeed.getBootstrapJS() + "</div>" + tweets;
     	});
     	
-//    	get("/fullFeed", fullFeed); //unfiltered
     	get("/hiddenFeed", hiddenFeed); //what I missed
     }
 }

@@ -7,6 +7,7 @@ import spark.Route;
 public class FilteredFeed implements Route {
 
 	private String tweetInfo;
+	private String keyword;
 
 	public FilteredFeed() {
 //		 tweetInfo =
@@ -34,20 +35,18 @@ public class FilteredFeed implements Route {
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
 	
-//	private final String refreshButton = "<div><form action=\"filteredFeed\" method=\"get\"> "+
-//			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my filtered feed</button>" +
-//			"</form></div></div></html>";
-//
-//	public String getRefreshButton() {
-//		System.out.println("returning");
-//		return refreshButton;
-//	}
+	private String refreshButton = "<div><form action=\"filteredFeed?keyword=" + this.keyword + "\\ + method=\"get\"> "+
+			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
+			"</form></div></div></html>";
 
-	private static String keyword;
+	public String getRefreshButton() {
+		return refreshButton;
+	}
 
 	public String getTweetInfo(String keyword) {
 		tweetInfo = BackEndHandler
 				.tweetToString(BackEndHandler.filteredFeed(keyword));
+//		this.keyword = keyword;
 		return tweetInfo;
 	}
 
@@ -72,7 +71,12 @@ public class FilteredFeed implements Route {
 		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
 	
-	public static String getKeyword() {
+	public String getKeyword() {
 		return keyword;
 	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
 }

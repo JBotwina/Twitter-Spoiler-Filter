@@ -3,18 +3,21 @@ package PageHandlers;
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import twitter4j.Status;
 
 public class HiddenFeed implements Route{
 	private String tweetInfo; 
 	
 	public HiddenFeed() {
-//		tweetInfo = backEndHandlerParam.tweetToString(backEndHandlerParam.getBadStatuses());
+		
 	}
-
+	
+	//header for hidden page website 
 	private final String header = "<html><head><title>Spoiler Tweets</title><link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">" + 
 			"</head>" +
-			"<div text-align: center><h1>These are your spoilerer tweets </h1></div>\n";
-
+			"<div text-align: center><h1>These are your spoiler tweets </h1></div>\n";
+	
+	//
 	private final String bootstrapJS = "<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>";
@@ -23,8 +26,14 @@ public class HiddenFeed implements Route{
 	
 	public String getTweetInfo() {
 		tweetInfo = BackEndHandler.tweetToString(BackEndHandler.getBadStatuses());
-		if (tweetInfo.isEmpty()) return "You didn't miss a thing";
-		else return tweetInfo;
+		if (tweetInfo.length() < 136) {
+			tweetInfo = ("<div class=\"container\">\r\n" + 
+					"  <div class=\"page-header\">\r\n" + 
+					"    <h1 id=\"timeline\">No Spoiler Tweets!</h1>\r\n" + 
+					"  </div>\r\n" + 
+					"  <ul class=\"timeline\">");
+		}
+		return tweetInfo;
 	}
 	
 	public Object handle(Request request, Response response) throws Exception {

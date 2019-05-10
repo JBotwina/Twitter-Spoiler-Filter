@@ -3,7 +3,6 @@ package PageHandlers;
 import spark.Request;
 import spark.Response;
 import spark.Route;
-import twitter4j.Status;
 
 public class HiddenFeed implements Route{
 	private String tweetInfo; 

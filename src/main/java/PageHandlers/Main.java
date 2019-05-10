@@ -4,7 +4,6 @@ import static spark.Spark.*;
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.WelcomePage;
-import spark.Route;
 
 /**
  * This is the main runner for the program. It will consolidate the back-end methods and push 

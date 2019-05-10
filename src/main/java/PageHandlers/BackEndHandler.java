@@ -12,10 +12,10 @@ public class BackEndHandler {
 	public static String getWordsToFilter() {
 		return wordsToFilter;
 	}
-
-	public BackEndHandler() {
-		te = new TwitterExample();
-	}
+//
+//	public BackEndHandler() {
+//		te = new TwitterExample();
+//	}
 
 	public static ArrayList<Status> getBadStatuses() {
 		return te.getSpoilerTweets();	
@@ -30,6 +30,7 @@ public class BackEndHandler {
 		
 	public static ArrayList<Status> filteredFeed(String keyword) {
 		wordsToFilter = keyword;
+		te = new TwitterExample();
 		te.parseTweets(keyword);
 		return te.getGoodStatuses();
 	}

@@ -30,7 +30,7 @@ public class FilteredFeed {
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
 	
-	private String refreshButton = "<div><form action=\"filteredFeed?keyword=" + this.keyword + "\\ + method=\"get\"> "+
+	private String refreshButton = "<div><form action=\"filteredFeed\" name=\"keyword\" id=\"keyword\" value=" + keyword + " method=\"get\"> "+
 			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
 			"</form></div></div></html>";
 	
@@ -43,6 +43,7 @@ public class FilteredFeed {
 	}
 
 	public String getTweetInfo(String keyword) {
+		tweetInfo = "";
 		tweetInfo = BackEndHandler
 				.tweetToString(BackEndHandler.filteredFeed(keyword));
 		return tweetInfo;

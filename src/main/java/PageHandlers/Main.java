@@ -4,6 +4,7 @@ import static spark.Spark.*;
 import PageHandlers.FilteredFeed;
 import PageHandlers.HiddenFeed;
 import PageHandlers.WelcomePage;
+import spark.Route;
 
 /**
  * This is the main runner for the program. It will consolidate the back-end methods and push 
@@ -29,16 +30,23 @@ public class Main {
         
     	get("/", welcomePage); //user interface
     	
+    	get("/home", (req, res) -> {
+    		res.redirect("/");
+    		return "home";
+    	});
+    	
+    
+    	
     	get("/filteredFeed", (req, res) -> {	
     		String keyword = req.queryParams("keyword");
-    		filteredFeed.setKeyword(req.queryParams("keyword"));
+//    		filteredFeed.setKeyword(req.queryParams("keyword"));
     		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
     		String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
     				"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
     				"</form></div></div></html>";
     		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + 
     				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + refreshButton +
-    				"</div>" + filteredFeed.getTweetInfo(filteredFeed.getKeyword());
+    				"</div>" + filteredFeed.getTweetInfo(keyword);
     	});
     	
     	get("/fullFeed", (req, res) -> {

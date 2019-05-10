@@ -35,11 +35,17 @@ public class Main {
     		return "home";
     	});
     	
-    
-    	
+
     	get("/filteredFeed", (req, res) -> {	
-    		String keyword = req.queryParams("keyword");
-//    		filteredFeed.setKeyword(req.queryParams("keyword"));
+    		String keyword;
+    		
+    		if (!req.queryParams().isEmpty()) { 
+	    		 keyword = req.queryParams("keyword");
+	    		filteredFeed.setKeyword(req.queryParams("keyword"));
+    		}
+    		
+    		keyword = filteredFeed.getKeyword();
+    		
     		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
     		String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
     				"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +

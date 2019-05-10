@@ -11,6 +11,8 @@ import spark.Route;
  */
 public class WelcomePage implements Route {
 	
+	
+	
 	//header for website
 	private final String header = "<html><head><title>Welcome to Twitter Filter</title></head>\n" + "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\"></head>" + 
 			"<div text-align: center class=\"container\"><h1>Welcome to Twitter Filter by</h1>\n" + 

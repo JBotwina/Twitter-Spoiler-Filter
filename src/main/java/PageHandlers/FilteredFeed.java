@@ -4,7 +4,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 
-public class FilteredFeed implements Route {
+public class FilteredFeed {
 
 	private String tweetInfo;
 	private String keyword;
@@ -46,7 +46,6 @@ public class FilteredFeed implements Route {
 	public String getTweetInfo(String keyword) {
 		tweetInfo = BackEndHandler
 				.tweetToString(BackEndHandler.filteredFeed(keyword));
-//		this.keyword = keyword;
 		return tweetInfo;
 	}
 
@@ -60,11 +59,6 @@ public class FilteredFeed implements Route {
 
 	public String getHiddenFeedButton() {
 		return hiddenFeedButton;
-	}
-
-	public Object handle(Request request, Response response)
-			throws Exception {
-		return header + homeButton + hiddenFeedButton + tweetInfo;
 	}
 
 	public String getKeywordDiv() {

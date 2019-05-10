@@ -11,14 +11,6 @@ import PageHandlers.WelcomePage;
  * @authors Jhon Valencia, Melissa Amaya, James Botwina
  *
  */
-
-/**
- * Launches the app.
- * Handles all routes for app
- * sample comment
- * @author mamaya
- *
- */
 public class Main {
     public static void main(String[] args) {
     	port(8080);
@@ -54,6 +46,6 @@ public class Main {
     		return "<div class = \"container\">" + fullFeed.getHeader() + fullFeed.getHomeButton() + "<div><br>"+fullFeed.getRefreshButton() + "</div>" + fullFeed.getBootstrapJS() + "</div>" + tweets;
     	});
     	
-    	get("/hiddenFeed", hiddenFeed); //what I missed
+    	get("/hiddenFeed", hiddenFeed); //the spoiler tweets that the user wanted hidden for a time
     }
 }

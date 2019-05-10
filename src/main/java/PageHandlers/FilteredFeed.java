@@ -34,12 +34,17 @@ public class FilteredFeed {
 	private String refreshButton = "<div><form action=\"filteredFeed?keyword=" + this.keyword + "\\ + method=\"get\"> "+
 			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
 			"</form></div></div></html>";
+	
+//	"<form class=\"form-inline\" action=\"/filteredFeed\" method=get><label class=\"sr-only\" for=\"inlineFormInputName2\">Words to Filter</label>" 
+//	+ "<input type=\"text\" class=\"form-control mb-2 mr-sm-2\" name=\"keyword\" id=\"keyword\"placeholder=\"words to filter\" required> "
+//	+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary mb-2\"></form>";
 
 	public String getRefreshButton() {
 		return refreshButton;
 	}
 
 	public String getTweetInfo(String keyword) {
+		BackEndHandler be = new BackEndHandler();
 		tweetInfo = BackEndHandler
 				.tweetToString(BackEndHandler.filteredFeed(keyword));
 		return tweetInfo;

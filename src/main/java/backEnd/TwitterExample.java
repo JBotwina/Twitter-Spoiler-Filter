@@ -86,8 +86,6 @@ public class TwitterExample {
 	
 	public void parseTweets(String keyword) {
 		String delimiters = "[-\\t,;.?!:#$%@\\[\\](){}_*/]";
-<<<<<<< HEAD
-<<<<<<< HEAD
 		String[] keywords = keyword.split(" ");
 		
 			for(Status status : unfilteredStatuses) {
@@ -123,40 +121,9 @@ public class TwitterExample {
 			if(tweetedWord.toLowerCase().contains(keyword.toLowerCase())) {
 				return true;
 			}
-=======
-=======
->>>>>>> parent of 68d3f58... added multiple keyword functionality
-		for(Status status : unfilteredStatuses) {
-			String[] tweetedWords = status.getText().split(delimiters);
-			for(int x=0; x<tweetedWords.length; x++) {
-        		//in practice these keywords would be inputted by the user.
-        		//keyword param
-				
-//				System.out.println(keyword.toLowerCase().contains(tweetedWords[x].toLowerCase()) + " " + "Tweet: " + tweetedWords[x].toLowerCase() );
-        		if(tweetedWords[x].toLowerCase().contains(keyword.toLowerCase())){
-        			//we do not want to save duplicate statuses
-        			if(!spoilerTweets.contains(status)) {
-        				//add the status
-        				spoilerTweets.add(status);
-        			}
-        			//if a status contains the keyword, we don't have to check the rest.
-        			break;
-        		}
-        		//if we were able to look through the whole status without finding a keyword, add to good statuses
-        		if(x == tweetedWords.length-1) {
-        			//don't add duplicates
-        			if(!goodStatuses.contains(status)) {
-        				goodStatuses.add(status);
-        			}	
-        		}
-        	}
-<<<<<<< HEAD
->>>>>>> parent of 68d3f58... added multiple keyword functionality
-=======
->>>>>>> parent of 68d3f58... added multiple keyword functionality
 		}
+		return false;
 	}
-	
 	
 	public void retrieveStatuses() {
 		try {

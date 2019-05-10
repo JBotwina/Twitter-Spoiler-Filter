@@ -23,23 +23,28 @@ public class FilteredFeed {
 			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>";
 	
+	String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
+	
+	
+
+	String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
+			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
+			"</form></div></div></html>";
+	
 	public String getBootstrapJS() {
 		return bootstrapJS;
 	}
 
+	public String getKeywordDisplay() {
+		return keywordDisplay;
+	}
+	
 	private String hiddenFeedButton =
 			"<form action=\"hiddenFeed\" method=\"get\">" +
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
 	
-	private String refreshButton = "<div><form action=\"filteredFeed\" name=\"keyword\" id=\"keyword\" value=" + keyword + " method=\"get\"> "+
-			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
-			"</form></div></div></html>";
 	
-//	"<form class=\"form-inline\" action=\"/filteredFeed\" method=get><label class=\"sr-only\" for=\"inlineFormInputName2\">Words to Filter</label>" 
-//	+ "<input type=\"text\" class=\"form-control mb-2 mr-sm-2\" name=\"keyword\" id=\"keyword\"placeholder=\"words to filter\" required> "
-//	+ "<br><input type=\"submit\" value=\"Show me my filtered feed\" class=\"btn btn-primary mb-2\"></form>";
-
 	public String getRefreshButton() {
 		return refreshButton;
 	}

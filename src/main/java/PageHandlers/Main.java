@@ -45,13 +45,9 @@ public class Main {
     		}
     		
     		keyword = filteredFeed.getKeyword();
-    		
-    		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
-    		String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
-    				"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
-    				"</form></div></div></html>";
-    		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + 
-    				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + refreshButton +
+    	
+    		return "<div class = \"container\">" + filteredFeed.getHeader() + filteredFeed.getKeywordDisplay() + filteredFeed.getHomeButton() + 
+    				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + filteredFeed.getRefreshButton() +
     				"</div>" + filteredFeed.getTweetInfo(keyword);
     	});
     	

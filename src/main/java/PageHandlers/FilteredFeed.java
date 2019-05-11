@@ -70,7 +70,6 @@ public class FilteredFeed {
 
 	// display to indicate the keyword entered
 	public String getKeywordDiv() {
-		System.out.println("hello" + getKeyword());
 		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
 	

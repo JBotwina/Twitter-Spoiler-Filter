@@ -1,0 +1,27 @@
+James Botwina, Jhon Valencia, Melissa Amaya
+
+We worked collaboratively on Twitter Filter. The inspiration behind this project came from James. He was watching a soccer match he had Tivo-ed, and did not want his Twitter Feed to ruin the game for him before he watched it. That prompted the thought, 'What if I could filter out any tweets related to the game until the game is over'.  From this, Twitter Filter was born.
+
+We utilized the Twitter4j API to communicate with Twitter.
+
+James handled the backend set up, connecting to Twitter4j and writing the methods that retrieved the feed and then conducted the needed filtering. James made that information available to the front end so that Jhon and Melissa could make calls to retrieve that information.
+
+Jhon and Melissa worked in tandem on front end functionality. There was considerable overlap as they worked well tag-teaming when necessary due to schedule availability, ensuring that the project kept making forward progress and didn't get held up.  Roughly, Jhon handled HiddenFeed.java and FilteredFeed.java, and Melissa handled WelcomePage.java, FullFeedDisplay.  Main.java was very much a join effort.
+
+Jhon made significant process getting Bootstrap implemented, and handled all of the Tweet parsing to ensure we could display the needed information on the front end.  
+
+Each team member successfully uphelp their "assigned" responsibilities, with complete willingness to pitch in on some of the trickier implementation problems.
+
+Some challenges we had to overcome:
+
+Implementation of buttons: 
+- How to route to the necessary page with the needed actions.
+- How to pass a parameter (keyword) upon a button click to use for filtering tweets.
+- Upon routing back to the main page after initially filtering the feed, the keyword was not getting reset - we came up with a solution to ensure that they next keyword(s) entered by a user was the only keyword(s) used for the filtering, instead of adding on to the prior filter.
+
+Non-Technical Lessons We Learned:
+- Planning out the scope of a project and laying out the steps needed
+- Recognizing Scope Creep and when to narrow down feature aspirations to meet the time frame for the project
+- Utilizing Git in a team environment
+- How to communicate both face to face (via Zoom) as well as via code to ensure the methods that each person was writing was usable by the other team members (when needed)
+

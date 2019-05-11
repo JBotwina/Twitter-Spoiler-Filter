@@ -17,15 +17,11 @@ public class FilteredFeed {
 
 	private final String homeButton = "<div><button type=\"button\" onclick=\"location.href='/home'\" class=\"btn btn-primary\">Home</button></form></div>";
 	
-//	private final String homeButton = "<div><form action=\'\\' method =\"get\"><button type=\"submit\" class=\"btn btn-primary\">Home</button></form></div>";
-	
 	private static String bootstrapJS = "<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>";
 	
 	String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
-	
-	
 
 	String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
 			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
@@ -69,6 +65,7 @@ public class FilteredFeed {
 	}
 
 	public String getKeywordDiv() {
+		System.out.println("hello" + getKeyword());
 		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
 	

@@ -29,12 +29,13 @@ public class Main {
         
     	get("/", welcomePage); //user interface
     	
+    	// route to redirect when user navigates from filteredfeed back to home to ensure the keyword is reset
     	get("/home", (req, res) -> {
     		res.redirect("/");
     		return "home";
     	});
     	
-
+    	// route and logic for filteredfeed display. 
     	get("/filteredFeed", (req, res) -> {	
     		String keyword;
     		
@@ -51,6 +52,7 @@ public class Main {
     				"</div>" + filteredFeed.getTweetInfo(keyword);
     	});
     	
+    	//route and logic for unfiltered (fullfeed) display
     	get("/fullFeed", (req, res) -> {
     		String tweets = fullFeed.PullTweets();
     		return "<div class = \"container\">" + fullFeed.getHeader() + fullFeed.getHomeButton() + "<div><br>"+fullFeed.getRefreshButton() + "</div>" + fullFeed.getBootstrapJS() + "</div>" + tweets;

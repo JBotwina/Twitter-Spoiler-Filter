@@ -13,7 +13,7 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.User;
 
-public class TwitterExample {
+public class TwitterGenerator {
 	// gets Twitter instance with default credentials
     private Twitter twitter;
     private User user;
@@ -49,7 +49,7 @@ public class TwitterExample {
 		return goodStatuses;
 	}
 
-	public TwitterExample() {
+	public TwitterGenerator() {
 		twitter = new TwitterFactory().getInstance();
 		try {
 			user = twitter.verifyCredentials();

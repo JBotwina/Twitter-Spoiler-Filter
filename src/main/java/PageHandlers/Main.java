@@ -44,7 +44,8 @@ public class Main {
     		}
     		
     		keyword = filteredFeed.getKeyword();
-    	
+    		System.out.println("key: " + keyword);
+    		System.out.println(filteredFeed.getKeyword());
     		return "<div class = \"container\">" + filteredFeed.getHeader() + filteredFeed.getKeywordDisplay() + filteredFeed.getHomeButton() + 
     				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + filteredFeed.getRefreshButton() +
     				"</div>" + filteredFeed.getTweetInfo(keyword);

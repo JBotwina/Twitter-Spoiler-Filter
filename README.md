@@ -4,3 +4,5 @@ To run, clone the repo and run the Main.java file. The Main.java file can be fou
 src/main/java/PageHandlers/Main.java
 
 Must have jdk version 11 or higher on your machine. The code will only compile for JRE versions of at most 52.0.
+
+Tests are located in final-project-twitter-filter/src/test/java/

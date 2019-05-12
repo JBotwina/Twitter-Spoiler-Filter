@@ -14,9 +14,14 @@ public class FullFeedDisplayTest extends TestCase {
 		assertNotNull(f.getHomeButton()); 
 	}
 
-	public void testGetTweets() {
+	public void testGetBootstrapJS() {
 		FullFeedDisplay f = new FullFeedDisplay();
-	assertNotNull(f.getTweets()); 
+		assertNotNull(f.getBootstrapJS()); 
+	}
+	
+	public void testGetPullTweets() {
+		FullFeedDisplay f = new FullFeedDisplay();
+		assertNotNull(f.PullTweets()); 
 	}
 
 }

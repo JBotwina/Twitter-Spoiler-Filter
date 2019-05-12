@@ -1,7 +1,7 @@
 package PageHandlers;
 
 import java.util.ArrayList;
-import backEnd.TwitterExample;
+import backEnd.TwitterGenerator;
 import twitter4j.Status;
 
 /**
@@ -13,7 +13,7 @@ import twitter4j.Status;
  */
 
 public class BackEndHandler {
-	private static TwitterExample te;
+	private static TwitterGenerator te;
 	private static String wordsToFilter;
 
 	public static String getWordsToFilter() {
@@ -27,7 +27,7 @@ public class BackEndHandler {
 	
 	// calls TwitterGenerator class and returns an array list of all tweets (full-feed)
 	public static String fullFeed() {
-		te = new TwitterExample();
+		te = new TwitterGenerator();
 		String fullStatuses = tweetToString(te.getUnfilteredStatuses());
 		return fullStatuses;
 	}

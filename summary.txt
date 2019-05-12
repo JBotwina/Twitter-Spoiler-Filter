@@ -2,6 +2,8 @@ James Botwina, Jhon Valencia, Melissa Amaya
 
 We worked collaboratively on Twitter Filter. The inspiration behind this project came from James. He was watching a soccer match he had Tivo-ed, and did not want his Twitter Feed to ruin the game for him before he watched it. That prompted the thought, 'What if I could filter out any tweets related to the game until the game is over'.  From this, Twitter Filter was born.
 
+The theme of this project is having agency over your information stream and digital life. We implemented a refresh button so that the user has control over the flow of tweets, and is not passively interacting with the web app as would happen if we were to automatically update the timeline. This functionality proved challenging, but rewarding. Our team would like to develop technologies that provide for this type of healthy human interaction in the future.
+
 We utilized the Twitter4j API to communicate with Twitter.
 
 James handled the backend set up, connecting to Twitter4j and writing the methods that retrieved the feed and then conducted the needed filtering. James made that information available to the front end so that Jhon and Melissa could make calls to retrieve that information.

@@ -19,7 +19,8 @@ public class TwitterGenerator {
 	// gets Twitter instance with default credentials
     private Twitter twitter;
     //verifies the twitter account
-    private User user;
+    @SuppressWarnings("unused")
+	private User user;
     private ArrayList<Status> unfilteredStatuses;
     // statuses we do not want to push to web app.
     private ArrayList<Status> spoilerTweets;

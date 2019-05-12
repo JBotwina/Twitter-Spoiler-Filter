@@ -27,22 +27,14 @@ public class FilteredFeed {
 			"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n" + 
 			"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>";
 	
-	//header for user input keywords
-	String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + keyword  + "</div><br/>" ;
-	
 	//creates refresh button
-	String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
+	protected String refreshButton = "<div><form action=\"filteredFeed?keyword=" + keyword + "\\ + method=\"get\"> "+
 			"<button type=\"submit\" value=\"feed_refresh\" class=\"btn btn-outline-primary\">Refresh my feed</button>" +
 			"</form></div></div></html>";
 	
 	// getter for bootstrap code
 	public String getBootstrapJS() {
 		return bootstrapJS;
-	}
-
-	// getter for keyword display
-	public String getKeywordDisplay() {
-		return keywordDisplay;
 	}
 	
 	// getter for hidden feed button
@@ -51,11 +43,6 @@ public class FilteredFeed {
 					"<button type=\"submit\" value=\"hiddenFeed\" class=\"btn btn-warning\">Spoiler Feed</button>"
 					+ "</form></html>";
 	
-	//getter for refresh button
-	public String getRefreshButton() {
-		return refreshButton;
-	}
-
 	/**
 	 * Input: String
 	 * Output: String
@@ -68,6 +55,11 @@ public class FilteredFeed {
 		tweetInfo = "";
 		tweetInfo = BackEndHandler.tweetToString(BackEndHandler.filteredFeed(keyword));
 		return tweetInfo;
+	}
+	
+	//getter for refresh button
+	public String getRefreshButton() {
+		return refreshButton;
 	}
 
 	//getter for header
@@ -83,11 +75,6 @@ public class FilteredFeed {
 	//getter for hidden feed button
 	public String getHiddenFeedButton() {
 		return hiddenFeedButton;
-	}
-
-	//getter for keyword header
-	public String getKeywordDiv() {
-		return "<div><h4>We are filtering for the following word(s): </h4><p> " + getKeyword() + "</p></div>";
 	}
 	
 	//getter for keyword

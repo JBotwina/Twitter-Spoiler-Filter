@@ -45,7 +45,9 @@ public class Main {
     		}
     		
     		keyword = filteredFeed.getKeyword();
-    		return "<div class = \"container\">" + filteredFeed.getHeader() + filteredFeed.getKeywordDisplay() + filteredFeed.getHomeButton() + 
+    		String keywordDisplay = "<div><span style=\"font-weight:600;\">We are filtering for the following word(s): </span>" + 
+    								keyword  + "</div><br/>" ;
+    		return "<div class = \"container\">" + filteredFeed.getHeader() + keywordDisplay + filteredFeed.getHomeButton() + 
     				"<div><br>"+filteredFeed.getHiddenFeedButton() + "</div>" + filteredFeed.getBootstrapJS() + filteredFeed.getRefreshButton() +
     				"</div>" + filteredFeed.getTweetInfo(keyword);
     	});

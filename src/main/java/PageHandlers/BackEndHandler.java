@@ -34,6 +34,7 @@ public class BackEndHandler {
 	
 	// gets spoiler-free tweets
 	public static ArrayList<Status> filteredFeed(String keyword) {
+		te = new TwitterGenerator();
 		wordsToFilter = keyword;
 		te.parseTweets(keyword);
 		return te.getGoodStatuses();

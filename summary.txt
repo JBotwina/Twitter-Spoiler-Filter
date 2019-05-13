@@ -11,6 +11,8 @@ James handled the backend set up, connecting to Twitter4j and writing the method
 
 Jhon and Melissa worked in tandem on front end functionality. There was considerable overlap as they worked well tag-teaming when necessary due to schedule availability, ensuring that the project kept making forward progress and didn't get held up.  Roughly, Jhon handled HiddenFeed.java and FilteredFeed.java, and Melissa handled WelcomePage.java, FullFeedDisplay.  Main.java was very much a join effort.
 
+Melissa wrote the PageHandler tests.  James wrote the backEnd tests.
+
 Jhon made significant process getting Bootstrap implemented, and handled all of the Tweet parsing to ensure we could display the needed information on the front end.  
 
 Each team member successfully uphelp their "assigned" responsibilities, with complete willingness to pitch in on some of the trickier implementation problems.

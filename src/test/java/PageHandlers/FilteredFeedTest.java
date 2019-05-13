@@ -22,6 +22,12 @@ public class FilteredFeedTest extends TestCase {
 		FilteredFeed f = new FilteredFeed();
 		assertNotNull(f.getHiddenFeedButton()); 
 	}
+	
+	@Test
+	public void testGetHomeButton() {
+		FilteredFeed f = new FilteredFeed();
+		assertNotNull(f.getHomeButton()); 
+	}
 
 
 }

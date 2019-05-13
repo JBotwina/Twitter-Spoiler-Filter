@@ -25,9 +25,8 @@ public class FullFeedDisplayTest extends TestCase {
 	}
 	
 	@Test
-	public void testGetPullTweets() {
+	public void testGetRefreshButton() {
 		FullFeedDisplay f = new FullFeedDisplay();
-		assertNotNull(f.PullTweets()); 
+		assertNotNull(f.getRefreshButton()); 
 	}
-
 }

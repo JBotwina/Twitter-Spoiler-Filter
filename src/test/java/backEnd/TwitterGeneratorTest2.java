@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-class TwitterGeneratorTest2 {
+public class TwitterGeneratorTest2 {
 	
 	TwitterGenerator tg = new TwitterGenerator();
 
